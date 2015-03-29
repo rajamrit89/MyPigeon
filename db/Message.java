@@ -44,6 +44,28 @@ public class Message {
 	
 	@DatabaseField(dataType = DataType.DATE_STRING)
 	private Date deliveryTime;
+	
+	@DatabaseField(dataType = DataType.DATE_STRING)
+	private Date sentTime;
+	
+	public Date getSentTime() {
+		return sentTime;
+	}
+
+	public void setSentTime(Date sentTime) {
+		this.sentTime = sentTime;
+	}
+
+	public Date getSeenTime() {
+		return seenTime;
+	}
+
+	public void setSeenTime(Date seenTime) {
+		this.seenTime = seenTime;
+	}
+
+	@DatabaseField(dataType = DataType.DATE_STRING)
+	private Date seenTime; 
 
 	public long getChatThreadId() {
 		return chatThreadId;
